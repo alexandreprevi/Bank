@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-include_once '../../../config/Database.class.php';
+include_once '../../../models/config/Database.class.php';
 include_once '../../../models/Transaction.class.php';
 
 // Instantiate Db and connect

@@ -31,8 +31,9 @@ $("#transfertMoneyBtn").click(function(e) {
             reloadTransfertInfo(userFrom);
         },
         error: function(j, error, errorthrown) {
-            if (`${j.responseText}:contains(SQLSTATE[HY000])`) {
-                j.responseText = "All fields required";
+    
+            if (`${j.responseText}:contains(Message: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'from_amount' at row 1)`) {
+                j.responseText = "Transfer not possible";
             }
             $('#messageDisplay').html(`<div class="alert alert-danger">${j.responseText}</div>`);
         }
